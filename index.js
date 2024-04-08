@@ -43,6 +43,8 @@ function hanldeForm(){
 document.addEventListener("click",() =>
  hanldeForm)
 
+ console.log("hello")
+
 
         
 
