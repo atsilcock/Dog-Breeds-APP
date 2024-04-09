@@ -44,6 +44,7 @@ function fetchInformation() {
             
             
             row.addEventListener("click", () => {
+                const hidden = document.addClass(".hidden")
                 row.style.color = "red";
                 tableBody.innerHTML =  ""
                 tableBody.appendChild(row.cloneNode(true))

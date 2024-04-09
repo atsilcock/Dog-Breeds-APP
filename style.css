@@ -53,3 +53,7 @@ button {
     border: 3px solid black; 
 
 }
+
+.hidden {
+    display: none
+}
