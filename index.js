@@ -1,65 +1,47 @@
 const form = document.getElementById("form"); 
 
-document.addEventListener("DOMContentLoaded", () => {
-    fetchInformation();
-    
-});
-
-    function resetForm ()  {
-        const resetButton = document.getElementById("reset-button");
-        console.log(resetButton);
-        resetButton.addEventListener("click", (e) => { 
-            e.preventDefault(); 
-            form.reset()
-            
-        });
-    }
 
 
-    function commentForm(){
-        const textForm = document.getElementById("text")
-        console.log(textForm)
-        textForm.addEventListener("keydown", (e) => {
-            console.log(e)
-            if(e.key === "Enter"){
-                //e.preventDefault()
-                alert("Your message has been recieved!")
-            }
-        })
+function resetForm ()  {
+    const resetButton = document.getElementById("reset-button");
+    console.log(resetButton);
+    resetButton.addEventListener("click", (e) => { 
+        e.preventDefault(); 
+        form.reset()
         
-    }
+    });
+}
+
+
+function commentForm(){
+    const textForm = document.getElementById("text")
+    console.log(textForm)
+    textForm.addEventListener("keydown", (e) => {
+        console.log(e)
+        if(e.key === "Enter"){
+            //e.preventDefault()
+            alert("Your message has been recieved!")
+        }
+    })
     
-    commentForm()
-          
+}
+
+commentForm()
 
 
 
 function fetchInformation() {
-    fetch("http://localhost:3000/dogBreeds") 
-    .then(response => response.json()) 
+    fetch("http://localhost:3000/dogBreeds")
+    .then(response => response.json())
     .then(data => {
+        const tableBody = document.getElementById("data-table");
+        
+        // Clear existing rows to prevent duplicate entries on subsequent calls
+        tableBody.innerHTML = ''; 
+        
         data.forEach(breed => {
-            const tableBody = document.getElementById("data-table");
-            const row = document.createElement("tr"); 
-            
-            
-            row.addEventListener("click", () => {
-                const hidden = document.addClass(".hidden")
-                row.style.color = "red";
-                tableBody.innerHTML =  ""
-                tableBody.appendChild(row.cloneNode(true))
-                
-
-             
-                const postImage = document.getElementById("picture-body")
-                console.log(postImage)
-                const animalImage = document.createElement("img")
-                console.log(animalImage)
-                animalImage.src = breed.dogImage
-                postImage.append(animalImage)
-                
-                
-            });
+            const row = document.createElement("tr");
+            row.className = "table-row";
             
             const nameCell = document.createElement("td");
             nameCell.textContent = breed.dogName;
@@ -75,8 +57,19 @@ function fetchInformation() {
             
             tableBody.appendChild(row);
         });
+        
+        // Add a single event listener to the table body
+        tableBody.addEventListener("click", (e) => {
+            // Check if the clicked element is a row
+                e.target.parentNode.style.color = "blue"
+            
+        });
     });
 }
 
 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetchInformation();
+});
