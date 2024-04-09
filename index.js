@@ -22,7 +22,7 @@ function fetchInformation() {
             const tableBody = document.getElementById("data-table");
             const row = document.createElement("tr"); // Creating a new element called row
             
-            // Moved event listener attachment outside to correct scope
+            //Click event listener - this is to click on element which takes the row and clones it to the table body, while at removing the elements in the table
             row.addEventListener("click", () => {
                 row.style.color = "red";
                 tableBody.innerHTML = ""
