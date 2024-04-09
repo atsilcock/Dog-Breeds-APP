@@ -4,71 +4,85 @@
 {
       "DogName": "affenpinscher",
       "description": "The Affenpinscher is a German breed of small toy dog of Pinscher type. Originally developed as a mouser, the Affenpinscher is now commonly found as a companion worldwide.",
-      "dogType": "Toy"
+      "dogType": "Toy",
+      "dogImage": "https://t4.ftcdn.net/jpg/05/54/95/75/360_F_554957523_lo1esmcIHXAwH1Bdc9sXqNHKb67P5mLW.jpg"
     },
    { 
     "DogName": "african", 
     "description": "The Africanis is a dog landrace found across southern Africa. It is a medium-sized, short-coated dog, with a distinctive black patch on the outside of the tail.",
-    "dogType": "Hound"
+    "dogType": "Hound",
+    "dogImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Africanis_%281%29.jpg/1200px-Africanis_%281%29.jpg"
     },
     {
       "DogName": "airedale", 
       "description": "Known as the King of Terriers, the Airedale is indeed the largest of all terriers. The dog breed originated in the Aire Valley of Yorkshire, designed to catch otters and rats.",
-      "dogType": "Terrier"
+      "dogType": "Terrier", 
+      "dogImage": "https://www.omlet.us/images/cache/1024/682/Dog-Airedale_Terrier-An_Airedale_Terrier_standing_tall,_awaiting_a_command_from_it's_owner.jpg"
     },
     {
       "DogName": "akita",  
       "description": "The Akita is a large and powerful dog breed with a noble and intimidating presence. They were originally used for guarding royalty and nobility in feudal Japan.",
-      "dogType": "Working"
+      "dogType": "Working", 
+      "dogImage": "https://www.thefarmersdog.com/digest/wp-content/uploads/2022/08/Akita-1400x785.jpg"
     },
     {
       "DogName":"appenzeller", 
       "description": "The Appenzeller Sennenhund is a medium-sized herding dog from Switzerland, known for its versatility, intelligence, and high energy levels.",
-      "dogType": "Herding"
+      "dogType": "Herding", 
+      "dogImage": "https://www.thesprucepets.com/thmb/dfadmrtLzSIykK6x6pdbPeumOoI=/2832x0/filters:no_upscale():strip_icc()/AppenzellerSennenhundcarryingstick-aef17cdf67924093a749ef63d5e8a34a.jpg"
     },
     {
       "DogName":"basenji", 
       "description": "The Basenji, often known as the 'barkless dog,' is a unique breed with a cat-like demeanor. Originating from Africa, they are known for their intelligence, independence, and inability to bark.",
-      "dogType": "Hound"
+      "dogType": "Hound",
+      "dogImage": "https://www.sidewalkdog.com/wp-content/uploads/2024/01/Basenji.jpg"
     },
    { 
       "DogName":"beagle",  
      "description": "The Beagle is a small hound breed known for its incredible sense of smell and tracking ability. Friendly and curious, Beagles make great family pets.",
-    "dogType": "Hound"
+    "dogType": "Hound", 
+    "dogImage":
     },
     {"DogName": "boxer",  
       "description": "The Boxer is a medium to large-sized breed of working dog with a strong jaw and powerful bite. They are known for their loyalty, affection, and protective nature, making them great family pets.",
-      "dogType": "Working"
+      "dogType": "Working", 
+      "dogImage": "https://images.unsplash.com/photo-1610174830067-9382e4953a2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTA4MTl8MHwxfHNlYXJjaHwxMHx8YmVhZ2xlfGVufDB8MHx8fDE3MDUwNzM3OTN8MA&ixlib=rb-4.0.3&q=80&w=1080"
     },
    {
      "DogName":"bulldog",  
       "description": "The Bulldog, also known as the English Bulldog, is distinguished by its loose, saggy skin and pushed-nose. They are known for their courage and excellent guarding abilities but are also gentle and affectionate.",
-      "dogType": "Non-Sporting"
+      "dogType": "Non-Sporting", 
+      "dogImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Bulldog_inglese.jpg/640px-Bulldog_inglese.jpg"
     },
     {
       "DogName":"chihuahua",  
       "description": "The Chihuahua is the smallest dog breed in the world, known for its lively and confident personality. Despite their tiny size, they are full of energy and fiercely loyal to their owners.",
-      "dogType": "Toy"
+      "dogType": "Toy", 
+      "dogImage": "https://www.dutch.com/cdn/shop/articles/shutterstock_1958243851.jpg?v=1698182252"
     },
     {
       "DogName":"dalmatian", 
       "description": "Famous for their spotted coat and unique job description as carriage dogs, Dalmatians are high-energy, playful, and sensitive companions.",
-      "dogType": "Non-Sporting"
+      "dogType": "Non-Sporting", 
+      "dogImage":
     },
     {
       "DogName":"germanshepherd", 
       "description": "The German Shepherd is a versatile breed, known for its intelligence, courage, and loyalty. They are often used in police and military roles around the world.",
-      "dogType": "Herding"
+      "dogType": "Herding", 
+      "dogImage":
     },
     {
       "DogName": "labrador", 
       "description": "The Labrador Retriever is one of the most popular dog breeds in the United States. Known for their friendly nature, intelligence, and loyalty, Labradors make excellent family pets and companions.",
-      "dogType": "Sporting"
+      "dogType": "Sporting", 
+      "dogImage":
     },
     {
       "DogName":"pug", 
       "description": "The Pug is a breed with a distinctive wrinkly face and curled tail. Known for their playful and affectionate nature, Pugs are great companions.",
-      "dogType": "Toy"
+      "dogType": "Toy", 
+      "dogImage":
     }
   ]
 }

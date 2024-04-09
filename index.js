@@ -1,53 +1,58 @@
-document.addEventListener("DomContentLoaded", function(){
-     const form = document.getElementById("form") //grabing the form element from the index.html
-})
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("form"); // Grabbing the form element from the index.html
+    fetchInformation();
+    
+    function resetForm ()  {
+        const resetButton = document.getElementById("reset-button");
+        console.log(resetButton);
+        resetButton.addEventListener("click", (e) => { // Passing a click event listener as the parameter
+            e.preventDefault(); // This event is preventing the default action of the button - which is to submit/reset
+            form.reset()
+            
+        });
+    }
 
+});
 
-function hanldeForm(){
-
-    form.addEventListener("submit", (e) => { // passing an event as the parameter
-        e.preventDefault(); // this event is preventing the default action of the form - whic is to reset
-        
-            fetch("http://localhost:3000/dogBreeds") // fetching animal data from local server
-            .then(response => response.json()) // taking the response from the local server and converting it into a json file - Java Script Object Notation
-            .then(data => {  // taking the data from the converted JSON file itterating 
-               
-        
-                const tableBody = document.getElementById("data-body") // grabbing the ID data-body form the DOM
-                console.log(tableBody) //console logging to make sure it was grabbed
-                tableBody.innerHTML = "" // clears the previous results after the click (doesn't refresh)
-
-                data.forEach(breed => { // taking the data, that was converted into a JSON, and using a forEach loop to itterate through the array of objects)
-                    const row = document.createElement("tr") // creating a new element called row so that it can be appending to the tableBody element - this is where all of the appended elements will be stored
+function fetchInformation() {
+    fetch("http://localhost:3000/dogBreeds") // Fetching animal data from local server
+    .then(response => response.json()) // Taking the response from the local server and converting it into a json file - JavaScript Object Notation
+    .then(data => {
+        data.forEach(breed => {
+            const tableBody = document.getElementById("data-table");
+            const row = document.createElement("tr"); // Creating a new element called row
+            
+            // Moved event listener attachment outside to correct scope
+            row.addEventListener("click", () => {
+                row.style.color = "red";
+                tableBody.innerHTML = ""
+                tableBody.appendChild(row.cloneNode(true))
                 
-                //create and append the dog name cell
-                    const nameCell = document.createElement("td") // creating a new element that holds the table data (td)
-                    nameCell.textContent = breed.DogName // changing the text of the created element to the data that we have in our array of objects and using dot notation(chain method) to acccess the DogName index
-                    row.appendChild(nameCell) // appending the nameCell element, that was just created, to the row element that we created, within our forLoop
-
-                    const descriptionCell = document.createElement("td") 
-                    descriptionCell.textContent = breed.description
-                    row.appendChild(descriptionCell)
-
-                    const typeCell = document.createElement("td")
-                    typeCell.textContent = breed.dogType
-                    row.appendChild(typeCell)
-
-                    tableBody.appendChild(row)
-
-                //Input
+                const postImage = document.getElementById("picture-body")
+                console.log(postImage)
+                const animalImage = document.createElement("img")
+                console.log(animalImage)
+                animalImage.src = breed.dogImage
+                postImage.append(animalImage)
                 
                 
-                })
-                
-            })
-     })
- }
-
-hanldeForm()
-
-
-
-
+            });
+            
+            const nameCell = document.createElement("td");
+            nameCell.textContent = breed.DogName;
+            row.appendChild(nameCell);
+            
+            const descriptionCell = document.createElement("td");
+            descriptionCell.textContent = breed.description;
+            row.appendChild(descriptionCell);
+            
+            const typeCell = document.createElement("td");
+            typeCell.textContent = breed.dogType;
+            row.appendChild(typeCell);
+            
+            tableBody.appendChild(row);
+        });
+    });
+}
 
 
