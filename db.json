@@ -64,7 +64,7 @@
       "DogName":"dalmatian", 
       "description": "Famous for their spotted coat and unique job description as carriage dogs, Dalmatians are high-energy, playful, and sensitive companions.",
       "dogType": "Non-Sporting", 
-      "dogImage":
+      "dogImage": "https://cdn.britannica.com/47/236047-050-F06BFC5E/Dalmatian-dog.jpg"
     },
     {
       "DogName":"germanshepherd", 
