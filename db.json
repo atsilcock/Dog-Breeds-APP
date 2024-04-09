@@ -41,12 +41,12 @@
       "DogName":"beagle",  
      "description": "The Beagle is a small hound breed known for its incredible sense of smell and tracking ability. Friendly and curious, Beagles make great family pets.",
     "dogType": "Hound", 
-    "dogImage":
+    "dogImage": "https://images.unsplash.com/photo-1610174830067-9382e4953a2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTA4MTl8MHwxfHNlYXJjaHwxMHx8YmVhZ2xlfGVufDB8MHx8fDE3MDUwNzM3OTN8MA&ixlib=rb-4.0.3&q=80&w=1080"
     },
     {"DogName": "boxer",  
       "description": "The Boxer is a medium to large-sized breed of working dog with a strong jaw and powerful bite. They are known for their loyalty, affection, and protective nature, making them great family pets.",
       "dogType": "Working", 
-      "dogImage": "https://images.unsplash.com/photo-1610174830067-9382e4953a2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTA4MTl8MHwxfHNlYXJjaHwxMHx8YmVhZ2xlfGVufDB8MHx8fDE3MDUwNzM3OTN8MA&ixlib=rb-4.0.3&q=80&w=1080"
+      "dogImage": "https://cdn.britannica.com/34/233234-050-1649BFA9/Pug-dog.jpg"
     },
    {
      "DogName":"bulldog",  
@@ -70,19 +70,19 @@
       "DogName":"germanshepherd", 
       "description": "The German Shepherd is a versatile breed, known for its intelligence, courage, and loyalty. They are often used in police and military roles around the world.",
       "dogType": "Herding", 
-      "dogImage":
+      "dogImage": "https://images.saymedia-content.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cq_auto:eco%2Cw_1200/MTk2NzIzMTQ2NzMxMTAzMjUw/11-dogs-like-german-shepherd.png"
     },
     {
       "DogName": "labrador", 
       "description": "The Labrador Retriever is one of the most popular dog breeds in the United States. Known for their friendly nature, intelligence, and loyalty, Labradors make excellent family pets and companions.",
       "dogType": "Sporting", 
-      "dogImage":
+      "dogImage": "https://www.akc.org/wp-content/uploads/2017/11/Labrador-Retrievers-three-colors.jpg"
     },
     {
       "DogName":"pug", 
       "description": "The Pug is a breed with a distinctive wrinkly face and curled tail. Known for their playful and affectionate nature, Pugs are great companions.",
       "dogType": "Toy", 
-      "dogImage":
+      "dogImage": "https://cdn.britannica.com/34/233234-050-1649BFA9/Pug-dog.jpg"
     }
   ]
 }
