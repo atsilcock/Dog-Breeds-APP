@@ -1,7 +1,10 @@
+const form = document.getElementById("form"); // Grabbing the form element from the index.html
+
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("form"); // Grabbing the form element from the index.html
     fetchInformation();
     
+});
+
     function resetForm ()  {
         const resetButton = document.getElementById("reset-button");
         console.log(resetButton);
@@ -12,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-});
 
 function fetchInformation() {
     fetch("http://localhost:3000/dogBreeds") // Fetching animal data from local server
@@ -25,7 +27,7 @@ function fetchInformation() {
             //Click event listener - this is to click on element which takes the row and clones it to the table body, while at removing the elements in the table
             row.addEventListener("click", () => {
                 row.style.color = "red";
-                tableBody.innerHTML = ""
+                tableBody.innerHTML =  ""
                 tableBody.appendChild(row.cloneNode(true))
                 
 

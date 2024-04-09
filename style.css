@@ -40,6 +40,7 @@ button {
     background-color: rgb(255, 183, 0); /* Green background for other buttons */
     color: black; /* White text for other buttons */
     padding: 8px 16px; /* Padding */
+    margin-top: 5px;
     border: 3px solid black; /* No border */
 
 }
