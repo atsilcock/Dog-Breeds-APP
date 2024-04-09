@@ -10,7 +10,7 @@ function resetForm ()  {
         form.reset()
         
     });
-}
+
 
 
 function commentForm(){
