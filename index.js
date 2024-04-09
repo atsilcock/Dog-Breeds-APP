@@ -27,6 +27,7 @@ function commentForm(){
 }
 
 commentForm()
+          
 
 
 
@@ -61,6 +62,7 @@ function fetchInformation() {
         // Add a single event listener to the table body
         tableBody.addEventListener("click", (e) => {
             // Check if the clicked element is a row
+
                 e.target.parentNode.style.color = "blue"
             
         });
