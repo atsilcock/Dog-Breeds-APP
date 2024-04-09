@@ -11,6 +11,7 @@
     padding: 8px; /* Add padding to table cells */
     border: 3px solid black; /* Add black borders to cells */
     text-align: left; /* Align text to the left */
+    border: 3px solid black; /* Add a black border to each header cell */
 
 }
 
@@ -20,7 +21,7 @@
     height: 200px; /* Set a fixed height for all images */
     object-fit: cover; /* Ensure the aspect ratio is maintained without distortion */
     margin-top: 20px; /* Add some space above the images */
-    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+    
 }
 
 /* Styling for the table itself */
@@ -31,9 +32,10 @@ table {
 
 /* Add a stylistic box around the table */
 #data-table {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow to give a "floating" effect */
-    border-radius: 10px; /* Rounded corners for the table */
-    /*overflow: hidden; /* Ensures the border radius applies by hiding overflow */
+
+    font-weight: bold; /* Make the table headers bold */
+    padding: 8px; /* Add some padding for aesthetics */
+    border: 3px solid black; /* Add a black border to each header cell */
 }
 
 button {
