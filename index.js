@@ -41,7 +41,7 @@ function fetchInformation() {
             });
             
             const nameCell = document.createElement("td");
-            nameCell.textContent = breed.DogName;
+            nameCell.textContent = breed.dogName;
             row.appendChild(nameCell);
             
             const descriptionCell = document.createElement("td");
