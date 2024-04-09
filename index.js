@@ -15,7 +15,7 @@ function hanldeForm(){
         
                 const tableBody = document.getElementById("data-body") // grabbing the ID data-body form the DOM
                 console.log(tableBody) //console logging to make sure it was grabbed
-                tableBody.innerHTML = "" // clears the previous results
+                tableBody.innerHTML = "" // clears the previous results after the click (doesn't refresh)
 
                 data.forEach(breed => { // taking the data, that was converted into a JSON, and using a forEach loop to itterate through the array of objects)
                     const row = document.createElement("tr") // creating a new element called row so that it can be appending to the tableBody element - this is where all of the appended elements will be stored
