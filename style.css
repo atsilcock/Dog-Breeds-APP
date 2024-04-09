@@ -1,48 +1,55 @@
 /* Styling for table headers */
 #data-table thead td {
-    font-weight: bold; /* Make the table headers bold */
-    background-color: orangered; /* Add a background color to the header */
-    padding: 8px; /* Add some padding for aesthetics */
-    border: 3px solid black; /* Add a black border to each header cell */
+    font-weight: bold; 
+    background-color: orangered; 
+    padding: 8px; 
+    border: 3px solid black; 
 }
 
 /* Styling for table rows and cells */
 #data-table tbody td {
-    padding: 8px; /* Add padding to table cells */
-    border: 3px solid black; /* Add black borders to cells */
-    text-align: left; /* Align text to the left */
-    border: 3px solid black; /* Add a black border to each header cell */
+    padding: 8px; 
+    border: 3px solid black; 
+    text-align: left; 
+    border: 3px solid black; 
 
 }
 
-/* Ensures images are the same size */
+#text{
+    padding: 0px;
+    margin-top: 10px;
+    border-style: solid; 
+    font-weight: bold
+
+}
+
 #picture-body img {
-    width: 300px; /* Set a fixed width for all images */
-    height: 200px; /* Set a fixed height for all images */
-    object-fit: cover; /* Ensure the aspect ratio is maintained without distortion */
-    margin-top: 20px; /* Add some space above the images */
+    width: 300px; 
+    height: 200px; 
+    object-fit: cover;
+    margin-top: 100px; 
     
 }
 
-/* Styling for the table itself */
+
 table {
-    width: 100%; /* Make the table take up the full width of its container */
-    margin-top: 20px; /* Add some space above the table */
+    width: 100%; 
+    margin-top: 20px; 
 }
 
-/* Add a stylistic box around the table */
+
 #data-table {
 
-    font-weight: bold; /* Make the table headers bold */
-    padding: 8px; /* Add some padding for aesthetics */
-    border: 3px solid black; /* Add a black border to each header cell */
+    font-weight: bold;
+    padding: 8px; 
+    border: 3px solid black; 
 }
 
 button {
-    background-color: rgb(255, 183, 0); /* Green background for other buttons */
-    color: black; /* White text for other buttons */
-    padding: 8px 16px; /* Padding */
+    background-color: rgb(255, 183, 0);
+    color: black; 
+    padding: 8px 16px;
     margin-top: 5px;
-    border: 3px solid black; /* No border */
+    border: 3px solid black; 
 
 }
