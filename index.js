@@ -37,9 +37,6 @@ function fetchInformation() {
     .then(data => {
         const tableBody = document.getElementById("data-table");
         
-        // Clear existing rows to prevent duplicate entries on subsequent calls
-        tableBody.innerHTML = ''; 
-        
         data.forEach(breed => {
             const row = document.createElement("tr");
             row.className = "table-row";
@@ -68,7 +65,6 @@ function fetchInformation() {
         });
     });
 }
-
 
 
 
