@@ -28,6 +28,8 @@ function fetchInformation() {
                 tableBody.innerHTML = ""
                 tableBody.appendChild(row.cloneNode(true))
                 
+
+            // On the event listener - click, this is meant to show the image of that specific breed    
                 const postImage = document.getElementById("picture-body")
                 console.log(postImage)
                 const animalImage = document.createElement("img")
