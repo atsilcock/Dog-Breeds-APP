@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchInformation();
 });
 
-//handle fetch information a
+//handle fetch information 
 
 function fetchInformation() {
     fetch("http://localhost:3000/dogBreeds")
