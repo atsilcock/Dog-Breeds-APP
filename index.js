@@ -1,6 +1,6 @@
 //DOMContentLoaded event listener
 document.addEventListener("DOMContentLoaded", () => {
-    fetchInformation();
+    fetchInformation()
 });
 
 //handle fetch information below
@@ -9,39 +9,40 @@ function fetchInformation() {
     fetch("http://localhost:3000/dogBreeds")
     .then(response => response.json())
     .then(data => {
-        const tableBody = document.getElementById("data-table");
+        const tableBody = document.getElementById("data-table")
         
-        //itterating over data from fetch
+        // Iterating over data from fetch
         data.forEach(breed => {
-            const row = document.createElement("tr");
+            const row = document.createElement("tr")
             row.className = "table-row";
             
-            const nameCell = document.createElement("td");
+            const nameCell = document.createElement("td")
             nameCell.textContent = breed.dogName;
             row.appendChild(nameCell);
             
-            const descriptionCell = document.createElement("td");
+            const descriptionCell = document.createElement("td")
             descriptionCell.textContent = breed.description;
             row.appendChild(descriptionCell);
             
-            const typeCell = document.createElement("td");
+            const typeCell = document.createElement("td")
             typeCell.textContent = breed.dogType;
             row.appendChild(typeCell);
             
             tableBody.appendChild(row);
 
-            //click event listener
-            row.addEventListener("click", (e) => {
-    
-            row.style.color = "blue";
+            // Click event listener
+            row.addEventListener("click", () => {
+                row.style.color = "blue";
             });
         });
-        //event listener 
 
+        // Calling function
         resetForm();
         commentForm();
-
-        
+    })
+    .catch(error => {
+        console.error('Error fetching information:', error);
+        alert('Failed to fetch information. Please try again later.');
     });
 }
 
