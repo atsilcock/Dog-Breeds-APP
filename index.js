@@ -1,35 +1,6 @@
-const form = document.getElementById("form"); 
-
-
-
-function resetForm ()  {
-    const resetButton = document.getElementById("reset-button");
-    console.log(resetButton);
-    resetButton.addEventListener("click", (e) => { 
-        e.preventDefault(); 
-        form.reset()
-        
-    });
-}
-
-
-function commentForm(){
-    const textForm = document.getElementById("text")
-    console.log(textForm)
-    textForm.addEventListener("keydown", (e) => {
-        console.log(e)
-        if(e.key === "Enter"){
-            //e.preventDefault()
-            alert("Your message has been recieved!")
-        }
-    })
-    
-}
-
-commentForm()
-          
-
-
+document.addEventListener("DOMContentLoaded", () => {
+    fetchInformation();
+});
 
 function fetchInformation() {
     fetch("http://localhost:3000/dogBreeds")
@@ -54,20 +25,55 @@ function fetchInformation() {
             row.appendChild(typeCell);
             
             tableBody.appendChild(row);
-        });
-        
-        // Add a single event listener to the table body
-        tableBody.addEventListener("click", (e) => {
-            // Check if the clicked element is a row
 
-                e.target.parentNode.style.color = "blue"
-            
+            row.addEventListener("click", (e) => {
+    
+            row.style.color = "blue"
+            });
         });
+        //event listener 
+
+        resetForm()
+        commentForm()
+
+        
     });
 }
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    fetchInformation();
-});
+function resetForm ()  {
+    const resetButton = document.getElementById("reset-button");
+    console.log(resetButton);
+    resetButton.addEventListener("click", () => { 
+        rows = document.querySelectorAll("tr")
+        rows.forEach(row => row.style.color = "")
+    });
+}
+
+
+function commentForm(){
+    
+    const commentList = document.getElementById("comment-list")
+    
+    const textForm = document.getElementById("text")
+    console.log(textForm)
+    textForm.addEventListener("keydown", (e) => {
+        console.log(e)
+        if(e.key === "Enter"){
+            e.preventDefault()
+            alert("Your message has been recieved!")
+            console.log(commentList)
+            const li = document.createElement("li")
+            li.textContent = textForm.value
+            commentList.appendChild(li)
+            textForm.value = ""
+        }
+
+    
+    })
+    
+}
+
+          
+
