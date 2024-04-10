@@ -1,6 +1,9 @@
+//DOMContentLoaded event listener
 document.addEventListener("DOMContentLoaded", () => {
     fetchInformation();
 });
+
+//handle fetch information 
 
 function fetchInformation() {
     fetch("http://localhost:3000/dogBreeds")
@@ -8,6 +11,7 @@ function fetchInformation() {
     .then(data => {
         const tableBody = document.getElementById("data-table");
         
+        //itterating over data from fetch
         data.forEach(breed => {
             const row = document.createElement("tr");
             row.className = "table-row";
@@ -26,6 +30,7 @@ function fetchInformation() {
             
             tableBody.appendChild(row);
 
+            //click event listener
             row.addEventListener("click", (e) => {
     
             row.style.color = "blue";
@@ -45,6 +50,7 @@ function fetchInformation() {
 function resetForm ()  {
     const resetButton = document.getElementById("reset-button");
     console.log(resetButton);
+    //click listener 
     resetButton.addEventListener("click", () => { 
         rows = document.querySelectorAll("tr")
         rows.forEach(row => row.style.color = "")
@@ -58,6 +64,7 @@ function commentForm(){
     
     const textForm = document.getElementById("text")
     console.log(textForm)
+    //key event listener 
     textForm.addEventListener("keydown", (e) => {
         console.log(e)
         if(e.key === "Enter"){
