@@ -28,13 +28,13 @@ function fetchInformation() {
 
             row.addEventListener("click", (e) => {
     
-            row.style.color = "blue"
+            row.style.color = "blue";
             });
         });
         //event listener 
 
-        resetForm()
-        commentForm()
+        resetForm();
+        commentForm();
 
         
     });
