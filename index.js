@@ -1,6 +1,13 @@
-//DOMContentLoaded event listener
+
+// DOMContentLoaded event listener
 document.addEventListener("DOMContentLoaded", () => {
-    fetchInformation()
+    searchButton = document.getElementById("reset-button")
+    console.log(searchButton)
+
+    searchButton.addEventListener("click", fetchInformation)
+
+    comment()
+
 });
 
 //handle fetch information below
@@ -9,79 +16,111 @@ function fetchInformation() {
     fetch("http://localhost:3000/dogBreeds")
     .then(response => response.json())
     .then(data => {
-        const tableBody = document.getElementById("data-table")
+        const tableBody = document.getElementById("data-body")
+
+        const textField = document.getElementById("searchField")
+        textField.textContent = ""
+        console.log(textField.value)
         
-        // Iterating over data from fetch
-        data.forEach(breed => {
-            const row = document.createElement("tr")
-            row.className = "table-row";
-            
-            const nameCell = document.createElement("td")
-            nameCell.textContent = breed.dogName;
-            row.appendChild(nameCell);
-            
-            const descriptionCell = document.createElement("td")
-            descriptionCell.textContent = breed.description;
-            row.appendChild(descriptionCell);
-            
-            const typeCell = document.createElement("td")
-            typeCell.textContent = breed.dogType;
-            row.appendChild(typeCell);
-            
-            tableBody.appendChild(row);
+        const filteredData = data.filter(animal => animal.dogType.toLowerCase().includes(textField.value.toLowerCase()))
+        console.log(filteredData)
 
-            // Click event listener
-            row.addEventListener("click", () => {
-                row.style.color = "blue";
-            });
-        });
 
-        // Calling function
-        resetForm();
-        commentForm();
-    })
-    .catch(error => {
-        console.error('Error fetching information:', error);
-        alert('Failed to fetch information. Please try again later.');
-    });
+            
+        filteredData.forEach(breed => {
+            const list = document.getElementById("dog-list")
+            const listItem = document.createElement("li")
+            
+            const dogName = document.createElement("div")
+            dogName.textContent = `Dog Name: ${breed.dogName}`
+            
+            const dogDescription = document.createElement("div")
+            dogDescription.textContent = `Description: ${breed.description}`
+
+            const dogImage = document.createElement("img")
+            dogImage.src = breed.dogImage
+            dogImage.alt = `Image of ${breed.dogName}`
+            
+
+            listItem.appendChild(dogName)
+            listItem.appendChild(dogDescription)
+            listItem.appendChild(dogImage)
+
+            list.appendChild(listItem)
+    
+                
+                
+        })
+    }
+)}
+
+// 1) Grab comment-section from DOM 
+// 2) create un ordered list within the comment section 
+// 3) append list to the comments section 
+
+const h5 = document.getElementById("comments-section")  
+console.log(h5) 
+const list = document.createElement("ul")
+h5.append(list)
+
+//
+
+function comment(){
+
+
+  const input =  document.getElementById("practice-text")
+  const list = document.getElementById("comment-list")
+
+  input.addEventListener("keydown", (e) => {
+    if(e.key === "Enter"){
+        e.preventDefault()
+        const li = document.createElement("li")
+        li.textContent = input.value
+        list.appendChild(li)
+
+       input.value = ""
+
+       alert("Thanks for leaving us a message")
+    }
+
+})
+
+input.pre
 }
 
 
 
-function resetForm ()  {
-    const resetButton = document.getElementById("reset-button");
-    console.log(resetButton);
-    //click listener 
-    resetButton.addEventListener("click", () => { 
-        rows = document.querySelectorAll("tr")
-        rows.forEach(row => row.style.color = "")
-    });
-}
-
-
-function commentForm(){
-    
-    const commentList = document.getElementById("comment-list")
-    
-    const textForm = document.getElementById("text")
-    console.log(textForm)
-    //key event listener 
-    textForm.addEventListener("keydown", (e) => {
-        console.log(e)
-        if(e.key === "Enter"){
-            e.preventDefault()
-            alert("Your message has been recieved!")
-            console.log(commentList)
-            const li = document.createElement("li")
-            li.textContent = textForm.value
-            commentList.appendChild(li)
-            textForm.value = ""
-        }
 
     
-    })
+
+            
+
+
+            
+            
+            // Iterating over data from fetch
+            // data.forEach(breed => {
+            //     const row = document.createElement("tr");
+            //     row.className = "table-row";
+                
+            //     const nameCell = document.createElement("td");
+            //     nameCell.textContent = breed.dogName;
+            //     row.appendChild(nameCell);
+                
+            //     const descriptionCell = document.createElement("td");
+            //     descriptionCell.textContent = breed.description;
+            //     row.appendChild(descriptionCell);
+                
+            //     const typeCell = document.createElement("td");
+            //     typeCell.textContent = breed.dogType;
+            //     row.appendChild(typeCell);
+                
+            //     tableBody.appendChild(row);
+            
+            //     // Click event listener
+            //     row.addEventListener("click", () => {
+            //         row.style.color = "blue";
+            //     });
+            // });
+            
     
-}
-
-          
-

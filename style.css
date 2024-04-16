@@ -61,3 +61,26 @@ button {
 .table-row {
     cursor: pointer;
 }
+
+li {
+    padding: 8px
+}
+
+h3 {
+    color:cornflowerblue;
+}
+
+h1 {
+    text-align: center;
+    border: 1px solid yellow;
+    background-color: orangered;
+    color: white;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+h5 {
+    font-size: 15px
+}
