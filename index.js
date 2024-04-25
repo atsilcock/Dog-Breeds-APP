@@ -85,42 +85,48 @@ function comment(){
 
 })
 
-input.pre
+
 }
 
 
 
-
-    
-
             
+const tableBody = document.getElementById("fetch-table")
+console.log(tableBody)
 
+//Iterating over data from fetch
+            
+function tableFilteredData(){
+    fetch("http://localhost:3000/dogBreeds")
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(breed => {
+        const row = document.createElement("tr");
+        row.className = "table-row";
+        
+        const nameCell = document.createElement("td");
+        nameCell.textContent = breed.dogName;
+        row.appendChild(nameCell);
+        
+        const descriptionCell = document.createElement("td");
+        descriptionCell.textContent = breed.description;
+        row.appendChild(descriptionCell);
+        
+        const typeCell = document.createElement("td");
+        typeCell.textContent = breed.dogType;
+        row.appendChild(typeCell);
+        
+        tableBody.appendChild(row);
+        
+        // Click event listener
+        row.addEventListener("click", () => {
+            row.style.color = "blue";
+        });
+        });
+    })
+}
 
-            
-            
-            // Iterating over data from fetch
-            // data.forEach(breed => {
-            //     const row = document.createElement("tr");
-            //     row.className = "table-row";
-                
-            //     const nameCell = document.createElement("td");
-            //     nameCell.textContent = breed.dogName;
-            //     row.appendChild(nameCell);
-                
-            //     const descriptionCell = document.createElement("td");
-            //     descriptionCell.textContent = breed.description;
-            //     row.appendChild(descriptionCell);
-                
-            //     const typeCell = document.createElement("td");
-            //     typeCell.textContent = breed.dogType;
-            //     row.appendChild(typeCell);
-                
-            //     tableBody.appendChild(row);
-            
-            //     // Click event listener
-            //     row.addEventListener("click", () => {
-            //         row.style.color = "blue";
-            //     });
-            // });
+tableFilteredData()
+
             
     
