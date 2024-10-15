@@ -1,19 +1,27 @@
 Dog Breeds APP
 
-Function: 
+This application allows users to interact with a list of dog breeds in various ways. Users can click on each breed to highlight it, reset the highlights, and add comments. The app leverages modern web technologies and event handling to provide a seamless user experience.
 
-1) Click on each breed that highlights blue
-2) Click the Breeds button that resets form - changes blue back to black
-3) Enter comments into textbox - 1) Appends to the DOM 2) alert message appears
 
-Type of Events: 
+## Functionality
 
-1) DOMContent Loaded
-2) Click
-3) Submit
+1. Click on each breed to highlight it in blue.
+2. Click the "Breeds" button to reset the form, changing highlighted breeds back to black.
+3. Enter comments into the textbox:
+    - The comment appends to the DOM.
+    - An alert message appears.
 
-Itterators: 
-1) ForEach
+## Event Types
 
-Fetch: 
-1) Local file (db.json) 
+1. `DOMContentLoaded`
+2. `click`
+3. `submit`
+
+## Iterators
+
+1. `forEach`
+
+## Fetch
+
+1. Local file (`db.json`)
+
